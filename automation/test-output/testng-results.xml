@@ -2,20 +2,24 @@
 <testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="8319" started-at="2021-10-23T07:33:00 IST" finished-at="2021-10-23T07:33:08 IST">
+  <suite name="Default suite" duration-ms="377325" started-at="2021-10-23T12:37:43 IST" finished-at="2021-10-23T12:44:00 IST">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="8319" started-at="2021-10-23T07:33:00 IST" finished-at="2021-10-23T07:33:08 IST">
-      <class name="fbtests.fbtests1">
-        <test-method status="PASS" signature="OpeningCeremony()[pri:0, instance:fbtests.fbtests1@32d2fa64]" name="OpeningCeremony" is-config="true" duration-ms="4920" started-at="2021-10-23T07:33:00 IST" finished-at="2021-10-23T07:33:05 IST">
+    <test name="Default test" duration-ms="377325" started-at="2021-10-23T12:37:43 IST" finished-at="2021-10-23T12:44:00 IST">
+      <class name="fbtests.TestSet1">
+        <test-method status="PASS" signature="gearUp()[pri:0, instance:fbtests.TestSet1@7a3d45bd]" name="gearUp" is-config="true" duration-ms="13822" started-at="2021-10-23T12:37:43 IST" finished-at="2021-10-23T12:37:57 IST">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- OpeningCeremony -->
-        <test-method status="PASS" signature="Test1()[pri:0, instance:fbtests.fbtests1@32d2fa64]" name="Test1" duration-ms="3327" started-at="2021-10-23T07:33:05 IST" finished-at="2021-10-23T07:33:08 IST">
+        </test-method> <!-- gearUp -->
+        <test-method status="PASS" signature="GetVideoList()[pri:0, instance:fbtests.TestSet1@7a3d45bd]" name="GetVideoList" duration-ms="362545" started-at="2021-10-23T12:37:57 IST" finished-at="2021-10-23T12:43:59 IST">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- Test1 -->
-      </class> <!-- fbtests.fbtests1 -->
+        </test-method> <!-- GetVideoList -->
+        <test-method status="PASS" signature="teardDown()[pri:0, instance:fbtests.TestSet1@7a3d45bd]" name="teardDown" is-config="true" duration-ms="860" started-at="2021-10-23T12:43:59 IST" finished-at="2021-10-23T12:44:00 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- teardDown -->
+      </class> <!-- fbtests.TestSet1 -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

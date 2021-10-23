@@ -2,42 +2,34 @@ package util;
 
 import java.io.FileReader;
 import java.io.IOException;
+import java.util.HashMap;
+import java.util.HashSet;
+import java.util.Iterator;
+import java.util.Set;
 
-import org.json.simple.JSONArray;
-import org.json.simple.JSONObject;
-import org.json.simple.parser.JSONParser;
-import org.json.simple.parser.ParseException;
+import org.json.JSONArray;
+import org.json.JSONObject;
+
 
 public class FileUtil {
 
-	public JSONArray readJSON(String filePath) throws Exception
+	public static void readJSON(String filePath) throws Exception
 	{
 	
-	JSONParser jsonParser = new JSONParser();
-    FileReader reader = new FileReader(filePath);
-    //Read JSON file
-    Object obj = jsonParser.parse(reader);
-    return (JSONArray) obj;
+	
 	}
-	
-	public boolean validateJSONKeyValue(JSONArray jarray,String collectionName, String key, String value)
+	public static HashMap<String,String> readJSON(String jsonString,String collectionName)
 	{
-		for (Object parse_obj : jarray)
+		HashMap<String,String> retObj=null;
+		JSONObject obj = new JSONObject(jsonString);
+		JSONArray arr = obj.getJSONArray("0001");	
+		Set<String> key = arr.getJSONObject(0).keySet();
+		for(int i=0; i<key.size();i++)
 		{
-			JSONObject obj = (JSONObject) parse_obj;
-			JSONObject item = (JSONObject) obj.get(collectionName);
-			
-		if(item.get(key).toString().equals(value))
-		{
-			return true;
+			retObj.put(key.iterator().next(),arr.getJSONObject(0).getString(key.iterator().next()));
 		}
-		else
-		{
-			return false;
-		}
-			
-		}
-		return false;
+		
+		return retObj;
 	}
 	
 }
